@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATUALIZAR REGISTRO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <div class="menu-lateral">
+        <div class="logo">
+            <img src="img/rent.png" alt="Logotipo RentCars">
+        </div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="cont-padrao">
+            <h2 class="titulo">Atualizar Registro</h2>
+            <h3 class="txt">Informe o ID:</h3>
+            <input class="entrada2" type="text" name="id" id="id">
+        
+            <input type="button" value="Consultar ID" class="botao" onclick="consultarIdEdit()"><br><br>
+            <div class="space">
+                <h3>Dados do veículo:</h3>
+            </div>
+        </div>
+        
+
+        <div class="box-b">
+        <div class="box-y">
+            <form id="veiculoForm" method="POST" onsubmit="return enviarFormulario(event)">
+        
+                <!-- Campo "Locadora" -->
+                <div class="cont2">
+                    <input class="entrada" type="text" id="locadora" name="locadora" autocomplete="off" required>
+                    <div class="box"></div>
+                    <label class="rotulo" for="locadora">Locadora</label>
+                </div>
+        
+                <!-- Campo "Modelo" -->
+                <div class="cont2">
+                    <input class="entrada" type="text" id="modelo" name="modelo" autocomplete="off" required>
+                    <div class="box"></div>
+                    <label class="rotulo" for="modelo">Modelo</label>
+                </div>
+        
+                <!-- Campo "Marca" -->
+                <div class="cont2">
+                    <input class="entrada" type="text" id="marca" name="marca" autocomplete="off" required>
+                    <div class="box"></div>
+                    <label class="rotulo" for="marca">Marca</label><br>
+                </div>
+        
+                <!-- Campo "Ano" -->
+                <div class="cont2">
+                    <input class="entrada" type="number" id="ano" name="ano" min="1990" step="1" value="" required>
+                    <div class="box"></div>
+                    <label class="rotulo" for="ano">Ano</label>
+                </div>
+        
+                <!-- Campo "Motor" -->
+                <div class="cont2">
+                    <input class="entrada" type="text" id="motor" name="motor" autocomplete="off" required>
+                    <div class="box"></div>
+                    <label class="rotulo" for="motor">Motor</label>
+                </div>
+        
+                <!-- Campo "Portas" -->
+                <div class="cont2">
+                    <select class="entrada" name="portas" id="portas" required>
+                        <option value="" disabled selected></option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                    </select><br><br>
+                    <div class="box"></div>
+                    <label class="rotulo" for="portas">Portas</label>
+                </div>
+        
+                <!-- Campo "Câmbio" -->
+                <div class="cont2">
+                    <input class="entrada" type="text" id="cambio" name="cambio" autocomplete="off" required>
+                    <div class="box"></div>
+                    <label class="rotulo" for="cambio">Câmbio</label>
+                </div>
+        
+                <!-- Campo "Ar Condicionado" -->
+                <div class="cont2">
+                    <select class="entrada" name="arCondicionado" id="arCondicionado" required>
+                        <option value="" disabled selected></option>
+                        <option value="true">Sim</option>
+                        <option value="false">Não</option>
+                    </select><br><br>
+                    <div class="box"></div>
+                    <label class="rotulo" for="arCondicionado">Ar Condicionado</label>
+                </div>
+
+                <div id="mensagemSucesso" style="display: none;">Sucesso ao cadastrar veículo.</div>
+                
+                <input type="button" value="Atualizar" class="botao" onclick="atualizarVeiculo()">
+            </form>   
+        </div>
+        </div>
+        
+        
+    </div>
+</body>
+</html>

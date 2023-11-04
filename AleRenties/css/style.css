@@ -1,0 +1,324 @@
+/* estilo geral */
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* estilo corpo */
+body {
+    background-color: #eeeeed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* estilo logo*/
+.logo {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+/* estilo imagem logo */ 
+.logo img {
+    max-width: 100%;
+}
+
+/* estilo menu lateral */
+.menu-lateral {
+    background-color: #202020;
+    margin: 0;
+    padding: 0;
+    width: 220px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    bottom: 0;
+}
+
+/* estilo link*/
+.menu a {
+    background-color: #fbbb04;
+    display: block;
+    color: black;
+    font-weight: bold;
+    padding: 16px;
+    text-decoration: none;
+    margin-top: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.menu a.active { 
+    background-color:#fbbb04;
+    color: white;
+}
+
+.menu a:hover:not(.active) { 
+    background-color: #fbbb04;
+    color: white;
+}
+
+/* estilo container */
+.container {
+    width: calc(100% - 220px);
+    margin-left: 220px;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h2 {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+
+ .tittle {
+    text-align: left;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+/* estilo link */
+.acao {
+    background-color: #fbbb04;
+    width: 70%;
+    border-radius: 4px;
+    border: 0;
+    box-sizing: border-box;
+    outline: 0;
+    margin-top: 34px;
+    height: 55px;
+    transition: background-color 0.4s, color 0,4s;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #202020;
+    font-size: 1.2em;
+    font-weight: bold; 
+}
+
+.acao:hover {
+    background-color: #202020;
+    color: #fbbb04;
+    text-decoration: none;
+  }
+
+
+/* ESTILO FORM_____________________________________________________________________________ */ 
+/* estilo caixa preta */
+.box-b {
+    background-color: #202020;
+    width: 570px;
+    margin: auto;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: auto;
+    padding: 25px;
+    margin-bottom: 100px;
+}
+
+/* estilo caixa amarela */
+.box-y {
+    background-color: #fbbb04;
+    width: 520px;
+    margin: auto;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: auto;
+    padding: 15px;
+}
+
+/* estilo container do input */
+.cont2 {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    margin-top: 20px;
+}
+
+/* estilo input */
+.entrada {
+    background-color: white;
+    width: 100%;
+    border-radius: 4px;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+}
+
+/* estilo caixa flutuante acima do campo de entrada */
+.box {
+    background-color: #202020;
+    border-radius: 8px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    width: 100px;
+}
+
+/* estilo para a "box" quando o campo tem foco ou conteúdo */
+.entrada:focus ~ .box,
+.entrada:not([value=""]) ~ .box,
+.entrada:not([value="number"]) ~ .box {
+  transform: translateY(8px);
+  background-color: #202020;
+}
+
+/* estilo para o rótulo acima do campo de entrada */
+.rotulo {
+    left: 15px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+    color: #fbbb04;
+  }
+  
+/* estilo para o rótulo quando o campo tem foco ou conteúdo válido */
+  .entrada:focus ~ .rotulo,
+  .entrada:valid ~ .rotulo {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+  }
+
+/* estilo para o rótulo quando o campo tem conteúdo */
+  .entrada:not([value=""]) ~ .rotulo,
+  .entrada:not([value="number"]) ~ .rotulo {
+    color: #fbbb04;
+  }
+
+  .entrada:focus ~ .rotulo {
+    color: #fbbb04;
+  }
+
+  /* estilo botao verde */
+  .botao {
+    background-color: #1d8152;
+    width: 100%;
+    border-radius: 4px;
+    border: 0;
+    box-sizing: border-box;
+    outline: 0;
+    margin-top: 34px;
+    height: 55px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-items: center;
+}
+    
+.botao:hover {
+    background-color: #1d8152;
+    color: lavender;
+} 
+
+/* ESTILO CONSULTA / ATUALIZAR / REMOVER / SOBRE____________________________________________*/
+/* estilo container */
+.cont-padrao {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    margin: 20px 20px 0 20px;
+}
+
+/* espaçamento */
+.space {
+    margin-top: 35px;
+}
+
+.cont-padrao h2 {
+    text-align: center;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+.cont-padrao h3 {
+    text-align: left;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+.entrada2 {
+    background-color: #fbbb04;
+    width: 100%;
+    height: 55px;
+    border-radius: 4px;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    
+    outline: 0;
+    padding: 4px 20px 0;
+}
+
+/* estilo caixa textarea */
+.cont-padrao textarea {
+    background-color: #fbbb04;
+    width: 99%;
+    height: 210px;
+    border: 0;
+    border-radius: 4px;
+    resize: none;
+    overflow: auto;
+}
+
+/* estilo container de botões */
+.botoes-cont {
+    display: flex;
+    gap: 40px;
+}
+
+/* ESTILO ABOUT______________________________________________*/
+/* estilo caixa amarela */
+.box-about {
+    background-color: #fbbb04;
+    width: 100%;
+    height: 55px;
+    border-radius: 4px;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    outline: 0;
+    padding: 16px;
+    margin-top: -10px;
+}
+
+.box-about:hover {
+    color: white;
+}
+
+/* estilo icones */
+.icone {
+    display: flex; /* Torna os elementos filhos em linha e centralizados verticalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.icone i {
+    font-size: 30px; /* Tamanho do ícone */
+    margin-right: 30px; /* Espaçamento entre o ícone e o texto */
+}
+
+.icone span {
+    font-size: 1.2em; /* Tamanho do texto */
+}

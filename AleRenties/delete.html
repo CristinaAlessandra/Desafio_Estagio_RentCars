@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REMOVER REGISTRO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <div class="menu-lateral">
+        <div class="logo">
+            <img src="img/rent.png" alt="Logotipo RentCars">
+        </div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="cont-padrao">
+            <h2 class="titulo">Remover Registro</h2>
+
+            <h3 class="txt">Informe o ID:</h3>
+            <input type="text" name="id" id="idVeiculo" class="entrada2">
+
+            <h3 class="txt">Dados do veículo:</h3>
+            <textarea name="dados" id="dados" rows="10" cols="40"></textarea>
+
+            <div class="botoes-cont">
+                <input type="submit" value="Consultar" class="botao" onclick="consultarIdRem(event)">
+                <input type="submit" value="Remover" class="botao" onclick="removerVeiculo(event)">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
