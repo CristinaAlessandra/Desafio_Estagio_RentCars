@@ -1,7 +1,7 @@
 # Desafio_RentCars_Ale
 
 ## DESAFIO ESTÁGIO RENTCARS - PROJETO DE LOCADORA DE VEÍCULOS
-## CANDITADA: ALESSANDRA CRISTINA MACHADO MARCINEK
+## CANDITADA: ALESSANDRA CRISTINA
 
 
 O projeto consiste em um aplicativo CRUD (Create, Read, Update, Delete) desenvolvido em Node.js, que permitirá a gestão de veículos em uma locadora de carros. Cada veículo terá informações detalhadas, incluindo ID, locadora, modelo, marca, ano, motor, número de portas, tipo de câmbio, presença de ar-condicionado e datas de criação e atualização.
