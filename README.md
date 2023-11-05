@@ -1,7 +1,7 @@
 # Desafio_RentCars_Ale
 
-## DESAFIO ESTÁGIO RENTCARS - PROJETO DE LOCADORA DE VEÍCULOS
-## CANDITADA: ALESSANDRA CRISTINA
+### DESAFIO ESTÁGIO RENTCARS - PROJETO DE LOCADORA DE VEÍCULOS
+### CANDITADA: ALESSANDRA CRISTINA
 
 
 O projeto consiste em um aplicativo CRUD (Create, Read, Update, Delete) desenvolvido em Node.js, que permitirá a gestão de veículos em uma locadora de carros. Cada veículo terá informações detalhadas, incluindo ID, locadora, modelo, marca, ano, motor, número de portas, tipo de câmbio, presença de ar-condicionado e datas de criação e atualização.
@@ -26,42 +26,72 @@ O projeto consiste em um aplicativo CRUD (Create, Read, Update, Delete) desenvol
 
 
 ## COMO RODAR NA MÁQUINA:
-- clone o projeto git clone https://github.com/....
-- crie: 
-`mkdir /tmp/mysql-data`
+- clone o projeto git clone https://github.com/CristinaAlessandra/Desafio_Estagio_RentCars.git
 
-- rode: 
+- rode no terminal: 
 `docker run --name basic-mysql --rm -v /tmp/mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=ANSKk08aPEDbFjDO -e MYSQL_DATABASE=testing -p 3307:3306 -it mysql:8.0 `
 
-- crie um diretório: 
-`mkdir my_app`
-
-- entre na raiz do projeto: 
-`cd my_app`
-
-- faça as instalações necessárias:
-	`npm install express`
-	`npm install sequelize`	
-	`npm install nodemon`
-
-- dentro de package.json: 
-```
-	...
-	"scripts": {
-		"start": "./node_modules/nodemon/bin/nodemon.js index.js"
-	},
-	"dependencies": 
-	...
-```
-- rode: 
 `sudo docker start basic-mysql`
 
-- rode: 
 `npm run start`
 
 - pronto, subiu a API.
-- estrutura do código está em: `./index.js`
 
+- Para acessar o projeto na web copie o caminho do index.html e cole do seu navegador.
+
+- A estrutura do código está em: `./index.js`.
+
+
+## ESTRUTURA DA PÁGINA WEB MY_APP/AleRenties:
+- ./AleRenties: 	possui toda estrutura da página web.
+- .//css/style.css: 	possui os estilos de cada elemento construído.
+- .//js/app.js: 	possui o javascript.
+- .//img: 		possui a imagem de logo.
+- /node_modules:	possui todos os pacotes necesários para execução.
+- index.js: 		possui toda a estrutura.
+- package-lock.json: 	possui informações envolvendo a versão dos pacotes, comandos de execução, entre outras questões que situam a aplicação.
+- package.json:		possui um atributo scripts com o apontamento para script de nodemon. A subida da API se dá por executar `npm run start` na raiz do projeto.
+
+
+## COMO É COMPOSTA A PÁGINA WEB:
+Ela é composta por 6 htmls:
+- "Home", index.html: página principal, com botões de ação para CRUD.  
+- "About", about.html: página com dados sobre mim
+- "CREAT/POST", form.html: página de cadastro de veículo
+- "READ/GET", read.html: página de consultar todos ou por id
+- "UPDATE/PUT", update.html: página para atualizar veículo
+- "DELETE", delete.html: página para remover veículo
+
+
+## COMO NAVEGAR NA PÁGINA WEB:
+- HOME (index.html): possui menu lateral e em seu conteúdo possui 4 botões para o Registro de Véiculos:
+  1. Adicionar.
+  2. Consultar.
+  3. Atualizar.
+  4. Remover.
+
+- Ações que podem ser executadas em cada botão:
+MENU LATERAL:
+  1. Home:
+  	Página inicial com as opções CRUD.
+  2. About:
+  	Informações e contato sobre mim.
+CONTEÚDO DA HOME:
+  1. Adicionar: 
+	Informe os dados (locadora, modelo, marca, ano, motor, portas, câmbio e ar condicionado) e aperte em confirmar para cadastrar.
+	Para voltar ao menu principal clique no menu lateral em "Home".
+
+  2. Consultar:   
+ 	Para consultar por ID: informe o ID do veículo e clique em "Consultar".
+	Para consultar todos os registros: clique no botão "Consultar Todos".
+	Para voltar ao menu principal clique no menu lateral em "Home".
+
+  3. Atualizar:
+ 	Informe o ID do veículo e aperte em "Consultar ID". Os dados preencheram os campos abaixo.Faça as alterações necessárias e clique em "Atualizar". Caso contrário clique no menu lateral em "Home" para voltar a página inicial.
+
+  5. Remover:
+     	Informe o ID e clique no botão "Consultar". Confira os dados, caso queira remover clique no botão "Remover". Irá abrir um popup, confirme que deseja excluir.
+     
 
 ## ALTERAÇÕES NO ARQUIVO INDEX.JS:
 Para realizar as solicitações propostas pelo desafio, tomei a liberdade de realizar tais modificações:
@@ -287,33 +317,3 @@ app.delete('/deletar/:id', (req, res) => {
 ### CURL DELETE
 `curl --location --request DELETE 'localhost:3000/deletar/1'`
 
-
-## ESTRUTURA PÁGINA WEB MY_APP/AleRenties:
-- ./AleRenties: 	possui toda estrutura da página web
-- .//css/style.css: possui os estilos de cada elemento construído
-- .//js/app.js: 	possui o javascript 
-- .//img: 			possui a imagem de logo
-- /node_modules:	possui todos os pacotes necesários para execução
-- index.js: 		possui toda a estrutura 
-- package-lock.json: possui informações envolvendo a versão dos pacotes, comandos de execução, entre outras questões que situam a aplicação.
-- package.json:		possui um atributo scripts com o apontamento para script de nodemon. A subida da API se dá por executar `npm run start` na raiz do projeto
-
-
-## COMO SE LOCALIZAR NO PROJETO:
-- Toda configuração da página web (html/css/js) está em ./AleRenties
-- Rode no terminal:
-	`docker run --name basic-mysql --rm -v /tmp/mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=ANSKk08aPEDbFjDO -e MYSQL_DATABASE=testing -p 3307:3306 -it mysql:8.0`
-	`cd my_app`
-	`sudo docker start basic-mysql`
-	`npm run start`
-- Para rodar o projeto na web copie o caminho do index.html e cole do seu navegador
-
-
-## COMO É COMPOSTA A PÁGINA WEB:
-Ela é composta por 6 htmls:
-- "Home", index.html: página principal, com botões de ação para CRUD.  
-- "About", about.html: página com dados sobre mim
-- "CREAT/POST", form.html: página de cadastro de veículo
-- "READ/GET", read.html: página de consultar todos ou por id
-- "UPDATE/PUT", update.html: página para atualizar veículo
-- "DELETE", delete.html: página para remover veículo
